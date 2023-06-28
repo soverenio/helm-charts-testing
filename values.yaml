@@ -36,7 +36,7 @@ sender:
   daemonSetLabels: {}
   podAnnotations: {}
   image:
-    name: soveren/echo-sender
+    name: soveren/sender
     tag: latest
     pullPolicy: Always
   podLabels: {"soveren-test"}
