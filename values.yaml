@@ -8,7 +8,7 @@ receiver:
   daemonSetLabels: {}
   podAnnotations: {}
   image:
-    name: dboitsov/receiver
+    name: soveren/receiver
     tag: latest
     pullPolicy: Always
   podLabels: {}
@@ -36,7 +36,7 @@ sender:
   daemonSetLabels: {}
   podAnnotations: {}
   image:
-    name: dboitsov/echo-sender
+    name: soveren/echo-sender
     tag: latest
     pullPolicy: Always
   podLabels: {"soveren-test"}
