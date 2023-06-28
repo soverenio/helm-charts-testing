@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-sender
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}-sender
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}-sender
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}-sender
+          image: {{ .Values.sender.image.name }}:{{ .Values.sender.image.tag }}
+          ports:
+            - containerPort: 8080
