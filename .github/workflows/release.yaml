@@ -44,7 +44,7 @@ jobs:
     
     - name: Pack and release
       run: |
-        cr package "charts/${CHART_NAME}"
-        cr upload "charts/${CHART_NAME}"
+        cr package "${CHART_NAME}"
+        cr upload "${CHART_NAME}"
         mkdir .cr-index
-        cr index "charts/${CHART_NAME}" --push
+        cr index "${CHART_NAME}" --push
