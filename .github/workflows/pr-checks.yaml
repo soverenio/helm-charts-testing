@@ -4,7 +4,7 @@ on:
   pull_request:
 
 env:
-  CHART_NAME: soveren-agent
+  CHART_NAME: soveren-test
 
 jobs:
   template-check:
