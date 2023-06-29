@@ -56,3 +56,30 @@ sender:
     annotations: { }
     labels: { }
     port: 8080
+
+receiver2:
+  daemonSetAnnotations: {}
+  daemonSetLabels: {}
+  podAnnotations: {}
+  image:
+    name: soveren/receiver2
+    tag: latest
+    pullPolicy: Always
+  podLabels: {}
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "64Mi"
+    limits:
+      cpu: "400m"
+      memory: "512Mi"
+  priorityClassName: ""
+  env: []
+  nodeSelector: { }
+  affinity: { }
+  tolerations: [ ]
+  service:
+    annotations: { }
+    labels: { }
+    port: 80
+    targetPort: 8080
