@@ -4,8 +4,8 @@ metadata:
   name: slave
 spec:
   selector:
-    app: {{ .Chart.Name }}-slave
+    app: {{ .Chart.Name }}
   ports:
     - name: http
       port: {{ .Values.receiver.service.port }}
-      targetPort: {{ .Values.receiver.service.targetPort }}
+      targetPort: {{ .Values.slave.service.targetPort }}

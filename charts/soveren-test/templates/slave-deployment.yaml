@@ -6,14 +6,14 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}-slave
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}-slave
+        app: {{ .Chart.Name }}
     spec:
       containers:
         - name: slave
-          image: {{ .Values.slave.image.name }}:{{ .Values.receiver.image.tag }}
+          image: {{ .Values.slave.image.name }}:{{ .Values.slave.image.tag }}
           ports:
             - containerPort: 8080
