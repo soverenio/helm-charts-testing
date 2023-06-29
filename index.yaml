@@ -1,0 +1,37 @@
+apiVersion: v1
+entries:
+  soveren-test:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-06-29T07:54:07.810883477Z"
+    description: A test toolset for Soveren app
+    digest: 652d4dda79229d67679e8b1515d38223743a368b0502875d64be2f650057dfbc
+    home: https://soveren.io
+    name: soveren-test
+    type: application
+    urls:
+    - https://github.com/soverenio/helm-charts-testing/releases/download/soveren-test-0.1.5/soveren-test-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-06-29T07:49:05.909871123Z"
+    description: A test toolset for Soveren app
+    digest: 55ccb474a9ae884893c33e5955cb50f6045a6a2dcf4c508f32d6764b655198a3
+    home: https://soveren.io
+    name: soveren-test
+    type: application
+    urls:
+    - https://github.com/soverenio/helm-charts-testing/releases/download/soveren-test-0.1.4/soveren-test-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-06-29T07:23:31.304118808Z"
+    description: A test toolset for Soveren app
+    digest: bfea79911d4f275af3344e2fcb8d70c441f5ddcfc3723803618c51229855a02a
+    home: https://soveren.io
+    name: soveren-test
+    type: application
+    urls:
+    - https://github.com/soverenio/helm-charts-testing/releases/download/soveren-test-0.1.3/soveren-test-0.1.3.tgz
+    version: 0.1.3
+generated: "2023-06-29T07:54:07.810892877Z"
