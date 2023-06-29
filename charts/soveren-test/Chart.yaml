@@ -4,7 +4,7 @@ description: A test toolset for Soveren app
 
 type: application
 
-version: 0.1.12
+version: 0.1.13
 
 appVersion: "0.1.0"
 home: https://soveren.io

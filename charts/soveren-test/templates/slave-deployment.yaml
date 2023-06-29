@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-receiver2
+  name: {{ .Chart.Name }}-slave
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -13,7 +13,7 @@ spec:
         app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: receiver2
-          image: {{ .Values.receiver2.image.name }}:{{ .Values.receiver.image.tag }}
+        - name: slave
+          image: {{ .Values.slave.image.name }}:{{ .Values.receiver.image.tag }}
           ports:
             - containerPort: 8080
