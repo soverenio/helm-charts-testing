@@ -1,4 +1,4 @@
-name: Release Charts
+name: Release Charts - new workflow
 
 on:
   push:
