@@ -6,11 +6,11 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: {{ .Chart.Name }}-slave
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}-{{ .Values.slave.image.name }}
+        app: {{ .Chart.Name }}-slave
     spec:
       containers:
         - name: slave
