@@ -4,7 +4,7 @@ metadata:
   name: receiver
 spec:
   selector:
-    app: {{ .Chart.Name }}
+    app: {{ .Chart.Name }}-{{ .Values.receiver.image.name }}
   ports:
     - name: http
       port: {{ .Values.receiver.service.port }}
