@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: slave
+  name: satellite
 spec:
   selector:
-    app: {{ .Chart.Name }}-slave
+    app: {{ .Chart.Name }}-satellite
   ports:
     - name: http
       port: {{ .Values.receiver.service.port }}
-      targetPort: {{ .Values.slave.service.targetPort }}
+      targetPort: {{ .Values.satellite.service.targetPort }}

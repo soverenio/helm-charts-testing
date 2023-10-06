@@ -57,12 +57,12 @@ sender:
     labels: { }
     port: 8080
 
-slave:
+satellite:
   daemonSetAnnotations: {}
   daemonSetLabels: {}
   podAnnotations: {}
   image:
-    name: soveren/slave
+    name: soveren/satellite
     tag: latest
     pullPolicy: Always
   podLabels: {}

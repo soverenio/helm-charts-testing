@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-slave
+  name: {{ .Chart.Name }}-satellite
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}-slave
+      app: {{ .Chart.Name }}-satellite
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}-slave
+        app: {{ .Chart.Name }}-satellite
     spec:
       containers:
-        - name: slave
-          image: {{ .Values.slave.image.name }}:{{ .Values.slave.image.tag }}
+        - name: satellite
+          image: {{ .Values.satellite.image.name }}:{{ .Values.satellite.image.tag }}
           ports:
             - containerPort: 8080
