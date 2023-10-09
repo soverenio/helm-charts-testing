@@ -61,3 +61,5 @@ In response to these requests:
 As a result of deploying this chart, you will observe the following on the [data map](https://app.soveren.io/data-map):
 
 ![Data map with test assets](./img/data-map-overview.png "Data map with test assets")
+
+There will be more pictures here
