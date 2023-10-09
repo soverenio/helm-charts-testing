@@ -58,6 +58,8 @@ In response to these requests:
 
 ## What you should see in the Soveren app
 
+### Data map
+
 As a result of deploying this chart, you will observe the following on the [data map](https://app.soveren.io/data-map):
 
 ![Data map with test assets](./img/data-map-overview.png "Data map with test assets")
@@ -75,4 +77,23 @@ Upon closer inspection, there are distinct flows between the `Sender` and each o
 and `Echo server` which is in the `Other outgoing` asset on the map:
 
 ![Flows between Sender and Echo server](./img/data-map-echo.png "Flows between Sender and Echo server")
- 
+
+### Data catalog
+
+The [data catalog](https://app.soveren.io/data-catalog/) shows those assets and flows in detail:
+
+Internal assets, i.e. the ones located inside the cluster:
+
+![Internal assets](./img/data-catalog-internal.png "Internal assets")
+
+External assets, i.e. the ones located outside the cluster:
+
+![External assets](./img/data-catalog-external.png "External assets")
+
+The full list of discovered Endpoints:
+
+![Endpoints](./img/data-catalog-endpoints.png "Endpoints")
+
+### Example response with detections
+
+![Response example](./img/response-example.png "Response example")
