@@ -62,4 +62,17 @@ As a result of deploying this chart, you will observe the following on the [data
 
 ![Data map with test assets](./img/data-map-overview.png "Data map with test assets")
 
-There will be more pictures here
+Upon closer inspection, there are distinct flows between the `Sender` and each of the following:
+
+`Receiver`:
+
+![Flows between Sender and Receiver](./img/data-map-receiver.png "Flows between Sender and Receiver")
+
+`Satellite`:
+
+![Flows between Sender and Satellite](./img/data-map-satellite.png "Flows between Sender and Satellite")
+
+and `Echo server` which is in the `Other outgoing` asset on the map:
+
+![Flows between Sender and Echo server](./img/data-map-echo.png "Flows between Sender and Echo server")
+ 
