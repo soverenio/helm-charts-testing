@@ -1,6 +1,6 @@
 # Soveren sample testing environment 
 
-This chart deploys a Soveren testbed into your existing Kubernetes cluster This allows you to evaluate Soveren's functionality hands-on, without the need to manage your own traffic.
+This chart deploys a Soveren testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without the need to manage your own traffic.
 
 ## Pre-requisites
 
