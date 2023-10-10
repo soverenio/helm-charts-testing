@@ -1,12 +1,12 @@
 # Soveren sample testing environment 
 
-This chart deploys a Soveren testbed into your existing Kubernetes cluster, allowing you to evaluate Soveren's functionality hands-on without having to manage your own traffic.
+This chart deploys a Soveren testbed into your existing Kubernetes cluster This allows you to evaluate Soveren's functionality hands-on, without the need to manage your own traffic.
 
-## Installation
+## Pre-requisites
 
 The primary pre-requisite is having the Soveren Agent deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/) for instructions on setting up the Agent.
 
-For installing the Agent you will need the following:
+To install the Agent, you will need the following:
 
 - Soveren account. [Get one](https://app.soveren.io/sign-up) if you haven't already.
 - A working [Helm](https://helm.sh) installation. Please refer to [documentation](https://helm.sh/docs) to get started.
@@ -17,7 +17,7 @@ Add the Soveren testing Helm repository:
 
     helm repo add soveren-test https://soverenio.github.io/helm-charts-testing
 
-If you had already added this repo earlier, run `helm repo update` to retrieve the latest versions of the packages.  You can then run `helm search repo soveren-test` to see the charts.
+If you had already added this repo before, run `helm repo update` to retrieve the latest versions of the packages.  You can then run `helm search repo soveren-test` to see the charts.
 
 Install the `soveren-test` chart:
 
@@ -29,7 +29,7 @@ To uninstall the chart:
 
 ## How it works
 
-Three containers with a minimal resource usage footprint are deployed into your Kubernetes cluster :
+Three containers, designed for minimal resource usage, are deployed into your Kubernetes cluster:
 
 - `soveren-testing-sender`, henceforth referred to as `Sender`
 - `soveren-testing-receiver`, henceforth referred to as `Receiver`
@@ -60,7 +60,7 @@ In response to these requests:
 
 ### Data map
 
-As a result of deploying this chart, you will observe the following on the [data map](https://app.soveren.io/data-map):
+After deploying this chart, you will observe the following in the [data map](https://app.soveren.io/data-map):
 
 ![Data map with test assets](./img/data-map-overview.png "Data map with test assets")
 
@@ -80,7 +80,7 @@ and `Echo server` which is in the `Other outgoing` asset on the map:
 
 ### Data catalog
 
-The [data catalog](https://app.soveren.io/data-catalog/) shows those assets and flows in detail:
+The [data catalog](https://app.soveren.io/data-catalog/) provides detailed views of these assets and flows:
 
 Internal assets, i.e. the ones located inside the cluster:
 
