@@ -14,7 +14,7 @@ receiver:
   podLabels: {}
   resources:
     requests:
-      cpu: "100m"
+      cpu: "20m"
       memory: "64Mi"
     limits:
       cpu: "400m"
@@ -42,7 +42,7 @@ sender:
   podLabels: {"soveren-test"}
   resources:
     requests:
-      cpu: "100m"
+      cpu: "20m"
       memory: "64Mi"
     limits:
       cpu: "400m"
@@ -68,7 +68,7 @@ satellite:
   podLabels: {}
   resources:
     requests:
-      cpu: "100m"
+      cpu: "20m"
       memory: "64Mi"
     limits:
       cpu: "400m"
