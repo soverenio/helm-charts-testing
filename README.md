@@ -2,8 +2,6 @@
 
 This chart deploys a Soveren Data-in-motion (DIM) Sensor testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without needing to manage your own traffic.
 
-You might also want to test a Soveren Data-at-rest (DAR) Sensor. The simplest way to do that is to [deploy the DAR Sensor](https://docs.soveren.io/en/stable/getting-started/quick-start/#data-at-rest-dar), point it to your [existing S3 bucket](https://docs.soveren.io/en/stable/administration/configuring-sensor/#s3-buckets), and add to that bucket some JSON or CSV files containing data that resembles personal information.
-
 ## Prerequisites
 
 The primary prerequisite is having the Soveren DIM Sensor deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/#data-in-motion-dim) for instructions on setting up the DIM Sensor.
@@ -106,3 +104,11 @@ The full list of API endpoints provided by the discovered services should look a
 ### Example response with detections
 
 ![Response example](./img/response-example.png "Response example")
+
+## Further testing options
+
+You might also want to test a Soveren Data-at-rest (DAR) Sensor. The simplest way to do that is to [deploy the DAR Sensor](https://docs.soveren.io/en/stable/getting-started/quick-start/#data-at-rest-dar), point it to your [existing S3 bucket](https://docs.soveren.io/en/stable/administration/configuring-sensor/#s3-buckets), and add to that bucket some JSON or CSV files containing data that resembles personal information.
+
+Soveren can also provide you with access to a sandbox environment populated with synthetic data resembling an actual configuration. That configuration includes web services in Kubernetes clusters, S3 buckets, Kafka clusters, and databases in different locations.
+
+This sandbox, while artificial, provides the best view into what you might be able to see in your actual environment. Please contact us at [support@soveren.io](mailto:support@soveren.io?Subject=Sandbox) if you are willing to try the sandbox.
