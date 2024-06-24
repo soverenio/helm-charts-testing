@@ -1,31 +1,36 @@
-# Soveren sample testing environment 
+# Soveren Data-in-motion (DIM) Sensor sample testing environment 
 
-This chart deploys a Soveren testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without the need to manage your own traffic.
+This chart deploys a Soveren Data-in-motion (DIM) Sensor testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without needing to manage your own traffic.
 
-## Pre-requisites
+## Prerequisites
 
-The primary pre-requisite is having the Soveren Agent deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/) for instructions on setting up the Agent.
+The primary prerequisite is having the Soveren Sensor deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/) for instructions on setting up the Agent.
 
-To install the Agent, you will need the following:
+To install the Sensor, you will need the following:
 
-- Soveren account. [Get one](https://app.soveren.io/sign-up) if you haven't already.
-- A working [Helm](https://helm.sh) installation. Please refer to [documentation](https://helm.sh/docs) to get started.
+- A Soveren account. If you don't have one already, [sign up](https://app.soveren.io/sign-up).
+- A working [Helm](https://helm.sh) installation. Please refer to the [documentation](https://helm.sh/docs) to get started.
 
 ## Installation
 
 Add the Soveren testing Helm repository:
 
-    helm repo add soveren-test https://soverenio.github.io/helm-charts-testing
-
-If you had already added this repo before, run `helm repo update` to retrieve the latest versions of the packages.  You can then run `helm search repo soveren-test` to see the charts.
-
+```console
+helm repo add soveren-test https://soverenio.github.io/helm-charts-testing
+```
 Install the `soveren-test` chart:
 
-    helm install demo-load soveren-test/soveren-test
+```shell
+helm install demo-load soveren-test/soveren-test
+```
+
+If you have already added this repository before, run helm repo update to retrieve the latest versions of the packages. You can then run helm search repo soveren-test to see the charts.
 
 To uninstall the chart:
 
-    helm delete demo-load
+```shell
+helm delete demo-load
+```
 
 ## How it works
 
