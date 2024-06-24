@@ -1,31 +1,38 @@
-# Soveren sample testing environment 
+# Soveren Data-in-motion (DIM) Sensor sample testing environment 
 
-This chart deploys a Soveren testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without the need to manage your own traffic.
+This chart deploys a Soveren Data-in-motion (DIM) Sensor testbed into your existing Kubernetes cluster. This allows you to evaluate Soveren's functionality hands-on, without needing to manage your own traffic.
 
-## Pre-requisites
+You might also want to test a Soveren Data-at-rest (DAR) Sensor. The simplest way to do that is to [deploy the DAR Sensor](https://docs.soveren.io/en/stable/getting-started/quick-start/#data-at-rest-dar), point it to your [existing S3 bucket](https://docs.soveren.io/en/stable/administration/configuring-sensor/#s3-buckets), and add to that bucket some JSON or CSV files containing data that resembles personal information.
 
-The primary pre-requisite is having the Soveren Agent deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/) for instructions on setting up the Agent.
+## Prerequisites
 
-To install the Agent, you will need the following:
+The primary prerequisite is having the Soveren DIM Sensor deployed in one of your Kubernetes clusters. Refer to our [quick start guide](https://docs.soveren.io/en/stable/getting-started/quick-start/#data-in-motion-dim) for instructions on setting up the DIM Sensor.
 
-- Soveren account. [Get one](https://app.soveren.io/sign-up) if you haven't already.
-- A working [Helm](https://helm.sh) installation. Please refer to [documentation](https://helm.sh/docs) to get started.
+To install the DIM Sensor, you will need the following:
+
+- A Soveren account. If you don't have one already, [sign up](https://app.soveren.io/sign-up).
+- A working [Helm](https://helm.sh) installation. Please refer to the [documentation](https://helm.sh/docs) to get started.
 
 ## Installation
 
 Add the Soveren testing Helm repository:
 
-    helm repo add soveren-test https://soverenio.github.io/helm-charts-testing
-
-If you had already added this repo before, run `helm repo update` to retrieve the latest versions of the packages.  You can then run `helm search repo soveren-test` to see the charts.
-
+```shell
+helm repo add soveren-test https://soverenio.github.io/helm-charts-testing
+```
 Install the `soveren-test` chart:
 
-    helm install demo-load soveren-test/soveren-test
+```shell
+helm install demo-load soveren-test/soveren-test
+```
+
+If you have already added this repository before, run helm repo update to retrieve the latest versions of the packages. You can then run helm search repo soveren-test to see the charts.
 
 To uninstall the chart:
 
-    helm delete demo-load
+```shell
+helm delete demo-load
+```
 
 ## How it works
 
@@ -78,21 +85,23 @@ and `Echo server` which is in the `Other outgoing` asset on the map:
 
 ![Flows between Sender and Echo server](./img/data-map-echo.png "Flows between Sender and Echo server")
 
-### Data catalog
+### Service catalog
 
-The [data catalog](https://app.soveren.io/data-catalog/) provides detailed views of these assets and flows:
+The [service catalog](https://app.soveren.io/service-catalog/) provides detailed views of the discovered services and the flows between them.
 
-Internal assets, i.e. the ones located inside the cluster:
+Services located inside the cluster:
 
-![Internal assets](./img/data-catalog-internal.png "Internal assets")
+![Services](./img/service-catalog-services.png "Services")
 
-External assets, i.e. the ones located outside the cluster:
+External connections, i.e. services located outside the cluster:
 
-![External assets](./img/data-catalog-external.png "External assets")
+![External connections](./img/service-catalog-external-connections.png "External connections")
 
-The full list of discovered Endpoints:
+### API endpoints
 
-![Endpoints](./img/data-catalog-endpoints.png "Endpoints")
+The full list of API endpoints provided by the discovered services should look as follows:
+
+![API endpoints](./img/api-endpoints.png "API endpoints")
 
 ### Example response with detections
 
