@@ -26,7 +26,7 @@ Install the `soveren-test` chart:
 helm install demo-load soveren-test/soveren-test
 ```
 
-If you have already added this repository before, run helm repo update to retrieve the latest versions of the packages. You can then run helm search repo soveren-test to see the charts.
+If you have already added this repository before, run `helm repo update` to retrieve the latest versions of the packages. You can then run `helm search repo soveren-test` to see the charts.
 
 To uninstall the chart:
 
