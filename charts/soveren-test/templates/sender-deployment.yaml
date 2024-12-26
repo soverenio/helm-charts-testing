@@ -18,7 +18,7 @@ spec:
           ports:
             - containerPort: 8080
           env:
-          {{ -range .Values.sender.env }}
+          {{- range .Values.sender.env }}
           - name: {{ .name }}
             value: {{ .value|quote }}
-          {{ -end }}
+          {{- end }}
