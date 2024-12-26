@@ -17,3 +17,8 @@ spec:
           image: {{ .Values.sender.image.name }}:{{ .Values.sender.image.tag }}
           ports:
             - containerPort: 8080
+          env:
+          {{ -range .Values.sender.env }}
+          - name: {{ .name }}
+            value: {{ .value|quote }}
+          {{ -end }}

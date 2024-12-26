@@ -48,7 +48,11 @@ sender:
       cpu: "400m"
       memory: "512Mi"
   priorityClassName: ""
-  env: []
+  env:
+    - name: URLS
+      value: "http://receiver:8081,http://satellite:8082"
+    - name: TIMEOUT
+      value: "60"
   nodeSelector: { }
   affinity: { }
   tolerations: [ ]
