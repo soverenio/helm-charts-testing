@@ -50,9 +50,9 @@ sender:
   priorityClassName: ""
   env:
     - name: URLS
-      value: "http://receiver:8081,http://satellite:8082"
+      value: "http://receiver:8080,http://satellite:8080"
     - name: TIMEOUT
-      value: "60"
+      value: "5"
   nodeSelector: { }
   affinity: { }
   tolerations: [ ]
